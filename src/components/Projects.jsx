@@ -19,9 +19,7 @@ const Projects = () => {
       </svg>
     ),
   };
-  const [projects, setProjects] = useState([]);
-
-  setProjects([
+  const [projects, setProjects] = useState([
     {
       name: "Stock Portfolio Web App",
       stack: ["Python", "Flask", "React"],
@@ -31,7 +29,15 @@ const Projects = () => {
 
   const [channel, setChannel] = useState(0);
 
-  useEffect(() => {}, [channel]);
+  useEffect(() => {
+    setProjects([
+      {
+        name: "Stock Portfolio Web App",
+        stack: ["Python", "Flask", "React"],
+        url: "https://pynance.netlify.app/",
+      },
+    ]);
+  }, [channel]);
   return (
     <section id="projects">
       <div className="heading">
