@@ -19,7 +19,10 @@ const Projects = () => {
       </svg>
     ),
   };
-  const [projects, setProjects] = useState([
+  const [projects, setProjects] = useState([]);
+
+  setProjects([
+    ...projects,
     {
       name: "Stock Portfolio Web App",
       stack: ["Python", "Flask", "React"],

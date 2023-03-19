@@ -50,7 +50,7 @@ const About = () => {
     <main id="about">
       <h3>About Me</h3>
       <section className="about-image">
-        <img src={template} className="me" />
+        <img src={template} className="me" alt="me" />
       </section>
 
       <Bio />
