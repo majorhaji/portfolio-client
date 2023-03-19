@@ -1,4 +1,3 @@
-import { useState } from "react";
 const Channels = ({ setChannel }) => {
   const changeChannel = (channel) => {
     setChannel(channel);
