@@ -81,6 +81,9 @@ html.dark-mode {
   text-align: center;
   background-color: var(--background);
   color: var(--text);
+  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .header {
@@ -478,23 +481,21 @@ p {
   #about {
     margin-bottom: 200px;
   }
-
-  .sun {
-    height: 20em;
-  }
-
-  .sun.dark-mode {
-    height: 60em;
-  }
 }
 
 @media (max-width: 500px) {
   #about {
     margin-bottom: 700px;
   }
+  .sun {
+    height: 20em;
+  }
 
   #footer {
     padding-top: 100px;
+  }
+  .toggle--label {
+    margin-left: 10%;
   }
 }
 
