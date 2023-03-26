@@ -33,6 +33,7 @@
   --background: #f8f8f8;
   --clouds: #fff;
   --bio: #1f2735;
+  --header: #f8f8f8;
   --bio-hover: #fa5f55;
   --text: black;
   --links: #309de0;
@@ -89,6 +90,10 @@ html.dark-mode {
   border-bottom: 1px solid var(--borders);
   background-color: var(--header);
   color: var(--text);
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .header div {
@@ -425,6 +430,7 @@ p {
 
 #projects {
   display: flex;
+  margin-top: 40px;
   justify-content: center;
   flex-direction: column;
   margin-left: 10vw;
@@ -448,15 +454,39 @@ p {
 @media (max-width: 1400px) {
   #projects {
     margin-left: 0;
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+    margin-right: 0;
   }
   .tv {
     flex-direction: column;
     margin-right: 0px;
+    width: 100vw;
+  }
+
+  iframe {
+    width: 100vw;
   }
 
   .channel {
     margin-bottom: 200px;
     margin-top: 50px;
+    margin-right: 100px;
+  }
+
+  #about {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  #about {
+    margin-bottom: 600px;
+  }
+
+  #footer {
+    padding-top: 100px;
   }
 }
 
@@ -484,7 +514,7 @@ p {
 
 .channel {
   margin-left: 30px;
-  background-color: whitesmoke;
+  background-color: grey;
   height: 500px;
 }
 
@@ -504,8 +534,7 @@ iframe {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
-  margin-top: 10%;
+  padding: 10px;
 }
 
 #about h3 {
@@ -514,9 +543,9 @@ iframe {
 
 #about img {
   border-radius: 30%;
-  margin: 2% 3% 0 3%;
   border: 1px solid var(--borders);
   background-color: var(--bio);
+  margin-bottom: 5em;
 }
 
 #about img:hover {
@@ -532,13 +561,13 @@ p {
 }
 
 .bio {
-  border-top: none;
-  border-bottom: none;
   padding: 20px;
   font-size: 20px;
+
   background-color: var(--boxes);
   border-radius: 10px;
-  margin: 8% 3% 0 3%;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 .tech-stack {
   grid-area: skills;
@@ -578,8 +607,9 @@ p {
 }
 
 .footer {
-  margin-top: 20%;
-  padding: 10%;
+  padding-top: 10vh;
+
+  bottom: 0;
   background-color: var(--boxes);
   color: var(--borders);
   height: 30vh;
