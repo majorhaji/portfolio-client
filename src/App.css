@@ -36,6 +36,7 @@
   --header: #f8f8f8;
   --bio-hover: #fa5f55;
   --text: black;
+  --tech: #87cefa;
   --links: #309de0;
   --link-hover: #d0b530;
 
@@ -64,6 +65,7 @@ html.dark-mode {
   --header: #4c4c4c;
   --links: #fdfd96;
   --link-hover: #0b0d25;
+  --tech: #465b70;
 
   /** moon **/
   --margin: 4em;
@@ -104,7 +106,13 @@ html.dark-mode {
   padding: 20px;
   flex-grow: 1;
 }
+.nav {
+  height: 35px;
+}
 
+.logo {
+  height: 35px;
+}
 nav a {
   background-color: inherit;
   margin-right: 30px;
@@ -301,10 +309,10 @@ p {
 .clouds {
   position: relative;
   top: 50px;
-  width: 320px;
-  height: 100px;
+  width: 20em;
+  height: 6.25em;
   background-color: var(--clouds);
-  border-radius: 100px;
+  border-radius: 6.25em;
   animation: animate 15s linear infinite;
   animation-duration: calc(400s / var(--i));
   opacity: 0.8;
@@ -313,10 +321,10 @@ p {
 .clouds::before {
   content: "";
   position: absolute;
-  top: -50px;
-  left: 40px;
-  width: 110px;
-  height: 110px;
+  top: -3.125em;
+  left: 2.5em;
+  width: 6.875em;
+  height: 6.875em;
   background: var(--clouds);
   border-radius: 50%;
   box-shadow: 90px 0 0 30px var(--clouds);
@@ -463,15 +471,16 @@ iframe {
 
 .channel h1 {
   margin-top: 0;
-  background-color: rgb(7, 50, 240);
+  background-color: var(--tech);
   margin-bottom: 0;
   padding: 20px;
-  color: rgb(218, 255, 10);
+  color: var(--text);
   font-weight: bolder;
 }
 
 .station {
-  background: #007fce;
+  background: var(--borders);
+  color: black;
   margin-top: 0;
   padding: 10px;
   font: inherit;
@@ -485,7 +494,7 @@ iframe {
 
 .channel {
   margin-left: 30px;
-  background-color: grey;
+  background-color: var(--tech);
   height: 500px;
 }
 
@@ -493,6 +502,10 @@ iframe {
   max-width: 30px;
   padding: 10px;
   padding-bottom: 0px;
+}
+.stack {
+  display: flex;
+  margin-left: 12em;
 }
 @media (max-width: 1400px) {
   #projects {
@@ -511,11 +524,18 @@ iframe {
   .channel {
     margin-bottom: 200px;
     margin-top: 50px;
-    margin-right: 100px;
+    margin-right: 40px;
+    margin-left: 20px;
   }
 
   #about {
     margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stack {
+    margin-left: 4em;
   }
 }
 
@@ -543,6 +563,10 @@ iframe {
   .channel {
     width: 90vw;
     margin-left: 20px;
+  }
+
+  .stack {
+    margin-left: none;
   }
 }
 
@@ -590,8 +614,27 @@ p {
 }
 
 .stack svg {
-  max-width: 50px;
+  width: 50px;
   padding: 8px;
+}
+
+.stack img {
+  width: 80px;
+  padding: 8px;
+}
+
+.stack-tech {
+  background-color: var(--tech);
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5%;
+  border: 1px solid var(--text);
+}
+
+.stack-tech:hover {
+  box-shadow: 8px 8px var(--borders);
 }
 
 .skills {
@@ -627,6 +670,6 @@ p {
 
   bottom: 0;
   background-color: var(--boxes);
-  color: var(--borders);
+  color: var(--text);
   height: 30vh;
 }
