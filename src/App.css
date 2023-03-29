@@ -524,7 +524,8 @@ iframe {
     margin-bottom: 700px;
   }
   .sun {
-    height: 20em;
+    height: 200px;
+    width: 62px;
   }
 
   #footer {
