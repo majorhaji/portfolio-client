@@ -490,12 +490,17 @@ iframe {
 .station * {
   margin: 0;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .channel {
   margin-left: 30px;
   background-color: var(--tech);
   height: 500px;
+}
+
+.station:hover {
+  transform: scale(1.02);
 }
 
 .tech-stack svg {

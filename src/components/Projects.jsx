@@ -37,25 +37,28 @@ const Projects = () => {
       ></img>
     ),
   };
-  const [projects, setProjects] = useState([
+  const [project, setProject] = useState({
+    name: "Stock Portfolio Web App",
+    stack: ["Python", "Flask", "React"],
+    url: "https://pynance.netlify.app/",
+  });
+
+  const [channel, setChannel] = useState(0);
+
+  const projects = [
     {
       name: "Stock Portfolio Web App",
       stack: ["Python", "Flask", "React"],
       url: "https://pynance.netlify.app/",
     },
-  ]);
-
-  const [channel, setChannel] = useState(0);
-
+    {
+      name: "News Website Reddit Clone",
+      stack: ["Node", "Javascript", "SQL"],
+      url: "https://fakeddit-nc-news.netlify.app",
+    },
+  ];
   useEffect(() => {
-    setProjects([
-      ...projects,
-      {
-        name: "News Website Reddit Clone",
-        stack: ["Node", "Javascript", "SQL"],
-        url: "https://fakeddit-nc-news.netlify.app",
-      },
-    ]);
+    setProject(projects[channel]);
   }, [channel]);
   return (
     <section id="projects">
@@ -65,16 +68,13 @@ const Projects = () => {
       <div className="tv">
         <article className="project">
           <div className="interactive">
-            <iframe
-              src={`${projects[channel].url}`}
-              title={`${projects[channel].name}`}
-            ></iframe>
+            <iframe src={`${project.url}`} title={`${project.name}`}></iframe>
             <h4>
-              <a href={projects[channel].url}> {projects[channel].name}</a>
+              <a href={project.url}> {project.name}</a>
             </h4>
             <p>Built using: </p>
             <div className="stack">
-              {projects[channel].stack.map((tech) => {
+              {project.stack.map((tech) => {
                 return <div className="stack-tech">{iconObj[tech]}</div>;
               })}
             </div>
