@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer className="footer">Copyright Yusuf Haji 2023</footer>;
+  return <footer className="footer">© {new Date().getFullYear()} Yusuf Haji</footer>;
 };
 
 export default Footer;

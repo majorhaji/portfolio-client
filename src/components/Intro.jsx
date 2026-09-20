@@ -13,9 +13,10 @@ const Intro = () => {
 
         <span className="clouds" style={{ "--i": 8 }}></span>
         <div className="intro-heading">
-          <h1>Hi, I'm Yusuf.</h1>
-          <h3>A software developer by day, superhero by night</h3>
-          <p></p>
+          <p className="kicker">Software developer · Luton, UK</p>
+          <h1>Hi, I’m Yusuf.<br />I build useful things for the web.</h1>
+          <p className="intro-copy">From thoughtful interfaces to reliable APIs, I enjoy turning an idea into a product people can use.</p>
+          <div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work</a><a className="button button-secondary" href="https://github.com/majorhaji" target="_blank" rel="noreferrer">GitHub ↗</a></div>
         </div>
         <span className="clouds" style={{ "--i": 2 }}></span>
 
